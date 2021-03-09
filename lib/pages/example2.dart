@@ -28,14 +28,13 @@ class OverlayBackgroundPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paintBackground = Paint()..color = Colors.black54;
-
-    final proportionHeight = 1.7;
-    final widthOverlay = size.width / 2;
-
     final paintBorder = Paint()
       ..color = Colors.white
       ..style = PaintingStyle.stroke
       ..strokeWidth = 3.0;
+
+    final proportionHeight = 1.7;
+    final widthOverlay = size.width / 2;
 
     final rectPicture = RRect.fromRectAndRadius(
       Rect.fromLTWH(size.width / 4, size.height * 0.2, widthOverlay,
